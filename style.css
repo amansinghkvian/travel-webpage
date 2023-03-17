@@ -1,0 +1,1003 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #faf8ed;
+    font-family: 'Poppins';
+    padding-left: 5%;
+}
+
+.navbar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-bottom: 3%;
+}
+.logo { 
+    display: flex;  
+}
+.logo p{
+    align-self: center;
+    font-weight: bold;  
+}
+.navbar-links{
+    width: 50vw;  
+}
+.navbar-links ul {
+    display: flex; 
+    margin-left: 2%;
+}
+.navbar-links li {
+    list-style: none;
+    display: block;
+    padding: 1rem;
+}
+.navbar-links li:hover {
+    background-color: white; 
+    border-radius: 12px;
+}
+.nav-button{
+    width: 22%;
+    text-align: center;
+    align-self: center;     
+}
+
+.nav-button .button{
+    width: 11vw;
+    height: 7vh;
+    font-size: 1rem;
+    border-radius: 20px;
+    background-color: white;
+    color: orange;
+    align-self: center;
+    border: 1.2px solid orange;
+}
+.nav-button .button h6{
+    font-size: 1rem;
+    margin-top: 6%;
+    /* margin-top: -1%; */
+
+}
+.nav-button i{
+    color: orangered;
+    background-color: none;
+    margin-left: 2%;
+}
+
+.toogle-button {
+    position: absolute;
+    top: .50rem;
+    right: 0.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.hideme{
+    display: none;
+}
+.discover-places{
+    display: flex;
+    flex-basis: 100%;
+    height: auto;
+    margin-bottom: 3%;
+    flex-wrap: wrap;
+}
+
+.discover-places-content{
+    flex-basis: 45%;
+    height:auto;
+    margin: auto;
+}
+.discover-places-content h1{
+    width: 40vw;
+    font-size: 4.3rem;
+    line-height: 5rem;
+    margin-bottom: 3%;   
+}
+.discover-places-content p{
+    width: 35vw;
+    margin-bottom: 3%;
+    height: auto;
+    text-align: justify;
+    font-size: 1rem;
+    color: grey;
+}
+.input-area{
+    width: 80%; 
+    border: 1px solid;
+    height: 80px;
+    background-color: white;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+}
+.search{
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 6%;
+}
+.search h4{
+    text-align: justify;
+}
+.date h4{
+    text-align: justify;
+}
+.date{
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 50%;
+}
+.search2{
+    position: absolute;
+    margin-left: 83%;
+    padding: 1%;
+    width: 15%;
+    height: 90%;
+    padding-top: 3%;
+    
+}
+.search2 img{
+    height: 100%;   
+}
+#location{
+    border-top-left-radius:50px ;
+    border-bottom-left-radius: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    border-right: none; 
+}
+#date{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    border-left: 2px solid rgb(205, 201, 201);
+}
+.discover-places-pic{
+    flex-basis: 45vw;
+    height: auto;
+    align-self: center;
+    text-align: center;
+    margin: auto;
+    position: relative;  
+}
+.dubai{
+    position: absolute;
+    border-radius: 0;
+    margin-top: 45%;
+    height: auto;
+    background-color: white;
+    margin-left: 2%;
+    border-top-right-radius: 10px;
+}
+@keyframes pic-background{
+    from{background-color: #ffd482;}
+    to{background-color: #ee8162;}
+}
+@keyframes pic-zoom{
+    0%{
+   transform:scale(0.9)
+}
+25%{
+    transform: scale(1.1);
+}
+}
+#img{
+    width: 35vw;
+    height:67vh ; 
+    background-color: #ffd482;
+    border-radius: 50%; 
+    z-index: -1; 
+    animation: pic-zoom 2s ease-in;   
+}
+.categories{
+    width: 100%;
+    height: auto;
+    margin-top: 1%;
+    padding-right: 2%;
+    margin-bottom: 3%;
+}
+.categories h1{
+    font-size: 3rem;
+    padding-right: 6%;
+}
+.categories h1 i{
+    margin: 1.5%;
+    float: right;
+    color: grey;
+    margin-top: 4%;   
+}
+.categories h1 i:hover{
+    color: black;
+}
+.categories p{
+    width: 30rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    color: grey;
+}
+.anime{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  .anime.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .anime2{
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 1s all ease ;
+  }
+  .anime2.active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+.categories .flex{
+     margin-top: 4%;
+    margin-bottom: 3%; 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.experience{
+    display: flex;
+    flex-basis: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    flex-wrap: wrap;
+    text-align: center;   
+}
+.experience .experience-pic{
+    flex-basis: 45vw;
+    height: auto;
+    align-self: center;
+}
+.experience .experience-pic img{
+    width: 30vw;
+    height: 50vh;
+    margin: auto;
+    background-color: #ffd482;
+    border-radius: 60%;
+    animation-name: pic-background;
+    animation-duration: 3s;
+    z-index: -1;
+    position: relative;
+}
+.customers{
+    position: absolute;
+    background-color: white;
+    width: 8vw;
+    height: 9vh;
+    border-radius: 5px;
+    margin-top: 46%;
+    margin-left: 58%;
+    box-shadow: 1px 1px 1px 2px lightgray;
+}
+.anime p{
+    color: gray;
+}
+.destinations {
+    position: absolute;
+    width: 8vw;
+    height: 16vh;
+    background-color: white;
+    margin-top: 23%;
+    margin-left: 9%;
+    box-shadow: 1px 1px 2px 1px lightgray;
+    border-radius: 10px;
+}
+.destinations h2{
+    color: orange;
+    margin-top: 18%;
+}
+.experience .experience-content{
+    height: auto;
+    flex-basis: 45vw;
+}
+.experience-content h3{
+    color: orangered;
+     padding: 1rem; 
+    font-size: 1.8rem;
+    text-align: justify;
+}
+.experience-content h1{
+     padding: 1.5rem; 
+    font-size: 2rem;
+    text-align: justify;
+    line-height: 4vh;
+}
+.experience-content p{
+     padding: 1.5rem; 
+    font-size: 1.5rem;
+    color: grey;
+    text-align: justify;
+}
+.experience-content .experience-flex
+{
+    display: flex;
+    justify-content: space-around;
+     padding: 1rem;
+    flex-wrap: wrap;
+}
+.experience-flex .flex-item{
+    box-shadow: 1px 1px 2px 2px lightgrey;
+    height: 24vh;
+}
+.experience-flex .flex-item h1{
+    color: orangered;
+}
+.experience-flex .flex-item p{
+    font-size: 1em;
+}
+.experience-flex .flex-item{
+    background-color: white;
+    flex-basis: 10vw;
+    margin-top: 2vh;
+}
+.popular-Destination{
+    margin-top: 3%;
+    margin-bottom: 3%;
+    height: auto;
+    width: 100%;
+    padding-right: 3%;
+}
+.popular-Destination h1{
+    height: auto;
+    padding-left: 3%; 
+    font-size: 3rem;
+    padding-right: 2%;
+}
+.popular-Destination h1 i{
+    float: right;
+    margin: 1.5%;
+    color: grey;
+    margin-top: 3%;
+}
+.popular-Destination h1 i:hover{
+    color: black;
+}
+.destination-flex{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.destination-flex .destination-flex-item{
+    background-color: white;
+    text-align: justify;
+    margin-top: 2%;
+    padding: 1.5%; 
+    width: 30%;
+}
+.destination-flex .destination-flex-item p{
+    color: grey;
+}
+.destination-book{
+    float: left;
+    margin-top: 2%;
+    color: grey;   
+}
+.destination-book button{
+    position: relative;
+    margin-left: 10vw;   
+}
+.destination-book b{
+    font-size: 1.8rem;
+    color: black;
+}
+.destination-flex-item button{
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 25px;
+    width: 100px;
+    height: 40px;
+    margin-top: 2%;
+}
+.destination-flex-item img{
+    width: 100%;
+    
+}
+.destination-flex-item .mountain{
+    background-color: black;
+    color: white;
+}
+.top-destination{
+    text-align: center;
+    margin-top: 3%;
+    width: 100%;
+    height: auto;
+    align-content: center;
+}
+.top-destination h1{
+    font-size: 3rem;
+    margin-bottom: 1%;
+}
+.top-destination p{
+    font-size: 1.4rem;
+    color: grey;
+    margin-bottom: 1%;
+}
+.top-destination button{
+    float: center;
+    width: 110px;
+    height: 42px;
+    border-radius: 20px;
+    margin-left: 1.5%;
+    margin-bottom: 2%;
+}
+.london-button{
+    background-color: black;
+    color: white;
+}
+.top-destination-flex{
+    width: 90vw;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 3%;
+}
+.dest-col3-second-row{
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;  
+}
+.feedback{
+    display: flex;
+    flex-basis: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    margin-top: 3%;
+}
+.feedback-image{
+    width: 45vw;
+    height: auto;
+    text-align: center;
+    margin: auto;
+}
+.feedback-image img{
+    width: 30vw;
+    height: 70vh;
+    border-radius: 41%;
+    background-color: #ee8162;
+    animation-name: pic-background;
+    animation-duration: 2s;
+}
+.feedback .customer-said{
+    width: 45vw;
+    height: auto;
+}
+.customer-said h1{
+    height: auto;
+    width: 30vw;
+    font-size: 3rem;
+}
+.customer-said p{
+    height: auto;
+    text-align: justify;
+    color: grey;
+    width: 40vw;
+    height: auto;
+    font-size: 1.5rem;
+    background-color: white;
+     padding: 5%; 
+    margin-top: 4%;
+    border-radius: 12px;
+}
+.customer-said p i{
+    float: right;
+    margin: 2%;
+}
+.customer-said p i:hover{
+    color: black;
+}
+.customer-said hr{
+    border: 4px solid orange;
+    width: 6vw;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 1%;
+}
+.sign-up{
+    width: 80vw;
+    height: auto;
+    margin :auto;
+    background-color: #ffd482;
+    color: black;
+    border-radius: 40px;
+    text-align: center;
+}
+.sign-up h1{
+    padding-top: 5%;
+    font-size: 3rem;
+}
+.sign-up p{
+    width: 20vw;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 2%;
+}
+.sign-up input{
+    width: 30vw;
+    height: 10vh;
+    border-radius: 10px;
+    border: 1px solid #ffd482;
+    padding: 3%; 
+    font-size: 1rem;
+    margin-bottom: 4%;
+    z-index: -1;
+    margin-left: auto;
+    margin-right: auto;
+}
+ .sign-up i{
+    position: relative;
+    margin: auto;
+    margin-right: 3px;
+    margin-left: -6.5%;   
+}
+.aero{
+     padding: 1%; 
+    padding-top: 23px;
+    padding-bottom: 23px;
+    border-radius: 10px;
+    background-color: orangered;
+    color: white;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    flex-wrap: wrap;
+}
+.footer li{
+    list-style-type: none;
+    line-height: 1.8rem;
+}
+.col-1{
+    flex-basis: 30vw;
+    align-self: center;
+}
+.resources{
+    flex-basis: 15vw;
+}
+.Travellers{
+    flex-basis: 15vw;
+}
+.Company{
+    flex-basis: 15vw;
+}
+.get-app{
+    flex-basis: 15vw;
+}
+@media(max-width:650px){
+   body{
+    padding-left: 0%;
+   }      
+   .toogle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .nav-button{
+        display: none;   
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+    .hideme {
+        display: none;
+    }
+    .hideme:checked~.navbar-links {
+        display: block;
+    }
+    .categories{
+        margin-top: 10%;
+    }
+    .categories h1{
+        font-size: 2rem;
+        width: 100%;
+       text-align: center;
+       margin-bottom: 5%;
+    }
+    .categories p{
+        font-size: 1.2rem;
+        width: 80%;
+        text-align: justify;
+        margin: auto;
+        
+    }
+    .discover-places{
+        padding: none;
+    }
+    .discover-places-content{
+        width: 100%;
+    }
+    .discover-places-content h1{
+        margin-top: 3%;
+        width: 80vw;
+        text-align: center;
+        line-height: 5vh;
+        font-size: 2rem;
+        margin-bottom: 2%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .discover-places-content p{
+        width: 80%;
+        text-align: justify;
+        font-size: 1.5rem;
+        margin: auto;
+    }
+    .discover-places-content .input-area{
+        width: 80%;
+        font-size: 1rem;
+    
+        margin-top: 2%;
+        margin: auto;  
+        
+    }
+    .discover-places-content .input-area p{
+        margin-left: 0%;
+
+    }
+    .discover-places-content .search{
+        width: 30vw;
+    }
+    .discover-places-content .search p{
+        font-size: 1rem;
+    }
+    .discover-places-content .date{
+        width: 33vw;
+    }
+    .discover-places-content .date p{
+        font-size: 1rem;
+    }
+    .discover-places-content .search2{
+        width: 20%;
+        height: 80%;
+        margin-top: 2%;
+        margin-left: 80%;
+    }
+  
+    .discover-places-pic  #img{
+        width: 80vw;
+        height: 40vh;
+        margin-top: 3%;
+    }
+    .experience .experience-pic {
+        flex-basis: 100vw;
+        margin-top: 7%;
+    }
+    .experience .experience-pic img{
+        width: 70vw;
+        height: 40vh;
+    }
+    .experience .experience-content{
+        flex-basis: 100vw;
+    }
+    .experience .experience-content h3{
+        text-align: center;
+    }
+    .experience-content h1{
+        text-align: center;
+
+    }
+   .popular-Destination{
+    flex-basis: 100%;
+    text-align: center;
+   }
+   .popular-Destination h1{
+    font-size: 2rem;
+   }
+   .popular-Destination h1 i{
+    display: none;
+   }
+  
+   .top-destination{
+    flex-basis: 100%;
+    margin-top: 7%;
+   }
+   .top-destination h1{
+
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+   }
+   .top-destination p{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+   }
+   .top-destination .top-destination-flex{
+    flex-basis: 80vw;
+    padding: 0;
+    margin: auto;
+   }
+   .input-area{
+    display: none; 
+   }
+   .discover-places{   
+   padding-top: 31px;
+    }
+        
+    .discover-places-content p {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        padding-top: 11px;
+    }
+    .destination-flex .destination-flex-item {
+        width: 92%;
+    }
+
+    .discover-places-pic{
+        padding-top: 13px;
+    }
+
+    .categories p {
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .flex{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .destination-book button {
+        margin-left: 0px;
+        width: 29%;
+    }
+
+    .destination-book{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .destination-flex-item{
+        width: 80%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .top-destination p,.experience-content p {
+        font-size:1rem;
+        text-align: center;
+    }
+    .destination-flex-item{
+        width: 92%;
+
+    }
+    
+    .destination-flex-item img{
+        width:100%;
+    }
+    
+   .top-destination .top-destination-flex img{
+     width: 80vw;
+     text-align: center;
+   }
+   .dest-col1-first-row{
+    width: 80vw;
+    margin: auto;
+    margin-top: 3%;
+   }
+   .dest-col1-first-row img{
+    width: 100vw;
+   }
+   .dest-col1-second-row{
+    width: 80vw;
+    margin-top: 3%;
+   }
+   .dest-col1-second-row img{
+    width: 100vw;
+   }
+   .top-destination{
+    margin-top: 7%;
+   }
+ 
+   .top-destination p{
+    text-align: justify;
+    margin-bottom: 3%;
+   }
+   .top-destination-flex-col2{
+    width: 80vw;
+    margin-top: 3%;
+    margin-bottom: 3%;
+   }
+   .top-destination-flex-col2 img{
+    width: 100vw;
+   }
+   .dest-col3-first-row{
+    margin-top: 3%;
+    width: 80vw;
+   }
+   .dest-col3-first-row img{
+    width: 100vw;
+    height: 20vh;
+   }
+   .dest-col3-second-row-col1 {
+    width:80vw;
+    margin-top: 3%;
+   }
+   .dest-col3-second-row-col1 img{
+    height: 18vh;
+   }
+   .dest-col3-second-row-col2 {
+    width:80vw;
+    margin-top: 3%;
+   }
+   .categories h1 i{
+    display: none;
+}
+   .feedback-image{
+    width: 100vw;
+   }
+   .feedback-image img{
+    width: 80vw;
+    height: 40vh;
+   }
+   .feedback .customer-said{
+    width: 100vw;
+    text-align: center;
+   }
+   .feedback hr{
+    display: none;
+   }
+   .customer-said h1{
+    margin-top: 4%;
+    font-size: 1.8rem;
+    width: 100vw;
+   }
+   .customer-said p{
+    width: 100vw;
+   }
+   .customer-said i{
+    display: none;
+   }
+   .sign-up h1{
+    margin-top: 7%;
+    font-size: 1.8rem;
+   }
+   .sign-up p{
+    width: 70vw;
+   }
+   .sign-up input{
+    width: 50vw;
+    height: 5.5vh;
+   }
+   .footer{
+    text-align: center;
+   }
+   .col-1{
+    flex-basis: 90vw;
+    margin-bottom: 2%;
+   }
+
+   .resources{
+    flex-basis: 90vw;
+    margin-top: 2%;
+   }
+   .Travellers{
+    flex-basis: 90vw;
+    margin-top: 2%;
+   }
+   .Company{
+    flex-basis: 90vw;
+    margin-top: 2%;
+   }
+   .get-app{
+    flex-basis: 90vw;
+    margin-top: 3%;
+   }
+   .dubai{
+    display: none;
+   }
+  .nav-button{
+    display: none;
+  }
+  .customers{
+    display: none;
+    
+  }
+  .destinations{
+    display: none;
+  }
+ 
+  .customer-said p {
+    width: 100%;
+    font-size:1rem;
+    text-align: center;
+}
+}
+@media (max-width: 900px) and (min-width: 650px)  {
+    .discover-places-content .input-area{
+        width: 100%;
+     }
+     .search2 .fa{
+        position: relative;
+        margin-top: 30%;
+        margin-bottom: auto;
+     }
+     .nav-button{
+        width: 20%;
+        margin-top: 0%;
+        margin-left: 1%;
+        margin-bottom: 4%;
+        display: none;
+     }
+     .fa-chevron-circle-right{
+        display: none;
+     }
+     .fa-chevron-circle-left{
+        display: none;
+     } 
+     .nav-button .button{
+        height: 40%;
+        width: 100%;
+     }
+     .nav-button .button h6{
+        /* padding: 5%; */
+        padding: 1%;
+     }
+     .navbar-links {
+        width: 80%;
+     }
+     #img{
+        height: 80%;
+     }
+     .discover-places-content h1{
+        font-size: 3rem;
+     }
+
+.experience .experience-pic img{
+        width: 70%;
+        height: 50vh;
+    }
+    .customers{
+        display: none;
+    }
+    .destinations{
+        display: none;
+    }
+    .experience-flex  .flex-item{
+        height: 40%;
+        width: 50%;
+    }
+}
+
